@@ -28,7 +28,7 @@
 }
 body {
   font-family: var(--fontFamily);
-  background: var(--color-neutral-950);
+  // background: var(--color-neutral-950);
   padding-bottom: 24px;
 }
 a {
@@ -165,6 +165,9 @@ section {
     font-size: 16px;
   }
 }
+.swiper-button-lock {
+  display: block !important;
+}
 .swiper__arrow {
   position: absolute;
   top: 50%;
@@ -191,6 +194,10 @@ section {
 }
 
 // ================ MAIN PAGE ===================
+.page__main {
+  background: var(--color-neutral-950) url("../img/bg.png") center / cover
+    no-repeat;
+}
 // HEADER ==================================================
 header {
   border-bottom: 1px solid var(--color-white-40);
@@ -428,28 +435,85 @@ header {
 }
 
 // ================ PRODUCT PAGE ===================
+.page__product {
+  background: var(--color-neutral-950) url("../img/bg-product.png") center /
+    cover no-repeat;
+}
 // Product
 .product {
   display: flex;
   gap: 32px;
+  width: 100%;
 
-  @media (width <= 992px) {
+  @media (width <= 1200px) {
     flex-direction: column;
+    align-items: center;
   }
   // .product__images
   &__images {
-    width: 100%;
-    background: #000;
+    max-width: 640px;
+    padding: 24px;
+    border-radius: 24px;
+    background: var(--color-gray-15);
+
+    @media (width <= 1200px) {
+      max-width: 100%;
+    }
+    @media (width <= 768px) {
+      padding: 16px;
+    }
+
+    // Slider Nft
+
+    .image__slide {
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 24px;
+        @media (width <= 480px) {
+          border-radius: 8px;
+        }
+      }
+    }
+
+    // Thumbs
+    .slider__nft-thumbs {
+      margin-top: 24px;
+      @media (width <= 480px) {
+        margin-top: 8px;
+      }
+
+      .swiper__arrow {
+        @media (width <= 992px) {
+          display: block;
+        }
+
+        &.swiper-button-disabled {
+          display: none;
+        }
+      }
+      .swiper__next {
+        right: 8px;
+      }
+      .swiper__prev {
+        left: 8px;
+      }
+    }
   }
 
   // .product__info
-
   &__info {
     background-color: var(--color-primary-60);
     padding: 48px 24px;
     border-radius: 32px;
     max-width: 496px;
     width: 100%;
+    // flex-shrink: 0;
+    @media (width <= 1200px) {
+      max-width: 100%;
+    }
     @media (width <= 992px) {
       max-width: 100%;
       padding: 24px 16px;
@@ -457,7 +521,6 @@ header {
   }
 
   // .product__tags
-
   &__tags {
     display: flex;
     flex-direction: column;
@@ -468,7 +531,6 @@ header {
   }
 
   // .product__tags-item
-
   &__tags-item {
     display: flex;
     align-items: center;
@@ -477,7 +539,6 @@ header {
   }
 
   // .product__text
-
   &__text {
     color: var(--color-gray);
     font-size: 16px;
@@ -487,7 +548,6 @@ header {
   }
 
   // .product__status
-
   &__status {
     color: var(--color-gray);
     font-size: 16px;
@@ -500,7 +560,6 @@ header {
   }
 
   // .product__divider
-
   &__divider {
     border-color: var(--color-primary-40);
     margin: 24px 0;
@@ -509,14 +568,10 @@ header {
   // .product__btn
   &__btn {
     margin-top: 40px;
-  }
-
-  // .product__price
-  &__price {
+    max-width: 100%;
   }
 
   // .product__price-amount
-
   &__price-amount {
     color: var(--color-gray);
     font-size: 32px;
@@ -526,19 +581,16 @@ header {
   }
 
   // .product__quantity
-
   &__quantity {
     margin-top: 24px;
   }
 
   // .product__total
-
   &__total {
     margin-top: 40px;
   }
 
   // .product__total-stats
-
   &__total-stats {
     color: var(--color-gray);
     font-size: 32px;
@@ -552,7 +604,6 @@ header {
   }
 
   // .product__progress
-
   &__progress {
     display: flex;
     border-radius: 8px;
@@ -564,7 +615,6 @@ header {
   }
 
   // .product__progress-filled
-
   &__progress-filled {
     position: absolute;
     left: 0;
@@ -573,11 +623,23 @@ header {
     background: var(--color-primary);
   }
 
-  &__btn {
+  // .product__about
+  &__about {
+    display: flex;
+    flex-direction: column;
     margin-top: 48px;
-    max-width: 100%;
+    gap: 24px;
+
+    &-text {
+      color: var(--color-gray);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+    }
   }
 }
+
 // Select
 .select {
   // .select__trigger

@@ -28,7 +28,6 @@
 
 body {
   font-family: var(--fontFamily);
-  background: var(--color-neutral-950);
   padding-bottom: 24px;
 }
 
@@ -188,6 +187,10 @@ section:first-child {
   }
 }
 
+.swiper-button-lock {
+  display: block !important;
+}
+
 .swiper__arrow {
   position: absolute;
   top: 50%;
@@ -212,6 +215,10 @@ section:first-child {
 
 .swiper-slide {
   height: auto !important;
+}
+
+.page__main {
+  background: var(--color-neutral-950) url("../img/bg.png") center/cover no-repeat;
 }
 
 header {
@@ -464,18 +471,71 @@ header {
   }
 }
 
+.page__product {
+  background: var(--color-neutral-950) url("../img/bg-product.png") center/cover no-repeat;
+}
+
 .product {
   display: flex;
   gap: 32px;
+  width: 100%;
 }
-@media (width <= 992px) {
+@media (width <= 1200px) {
   .product {
     flex-direction: column;
+    align-items: center;
   }
 }
 .product__images {
+  max-width: 640px;
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--color-gray-15);
+}
+@media (width <= 1200px) {
+  .product__images {
+    max-width: 100%;
+  }
+}
+@media (width <= 768px) {
+  .product__images {
+    padding: 16px;
+  }
+}
+.product__images .image__slide img {
+  max-width: 100%;
   width: 100%;
-  background: #000;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+}
+@media (width <= 480px) {
+  .product__images .image__slide img {
+    border-radius: 8px;
+  }
+}
+.product__images .slider__nft-thumbs {
+  margin-top: 24px;
+}
+@media (width <= 480px) {
+  .product__images .slider__nft-thumbs {
+    margin-top: 8px;
+  }
+}
+@media (width <= 992px) {
+  .product__images .slider__nft-thumbs .swiper__arrow {
+    display: block;
+  }
+}
+.product__images .slider__nft-thumbs .swiper__arrow.swiper-button-disabled {
+  display: none;
+}
+.product__images .slider__nft-thumbs .swiper__next {
+  right: 8px;
+}
+.product__images .slider__nft-thumbs .swiper__prev {
+  left: 8px;
 }
 .product__info {
   background-color: var(--color-primary-60);
@@ -483,6 +543,11 @@ header {
   border-radius: 32px;
   max-width: 496px;
   width: 100%;
+}
+@media (width <= 1200px) {
+  .product__info {
+    max-width: 100%;
+  }
 }
 @media (width <= 992px) {
   .product__info {
@@ -529,6 +594,7 @@ header {
 }
 .product__btn {
   margin-top: 40px;
+  max-width: 100%;
 }
 .product__price-amount {
   color: var(--color-gray);
@@ -569,9 +635,18 @@ header {
   height: 100%;
   background: var(--color-primary);
 }
-.product__btn {
+.product__about {
+  display: flex;
+  flex-direction: column;
   margin-top: 48px;
-  max-width: 100%;
+  gap: 24px;
+}
+.product__about-text {
+  color: var(--color-gray);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
 }
 
 .select {

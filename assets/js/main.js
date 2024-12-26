@@ -54,6 +54,42 @@ if (document.querySelector(".swiper")) {
       },
     },
   })
+
+  // Slider NFT
+  const thumbs = new Swiper(".slider__nft-thumbs", {
+    // Navigation arrows
+    navigation: {
+      prevEl: ".swiper__prev",
+      nextEl: ".swiper__next",
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      320: {
+        slidesPerView: 4,
+        spaceBetween: 8,
+      },
+      768: {
+        spaceBetween: 18,
+        slidesPerView: 4,
+      },
+    },
+  })
+  const nftSlider = new Swiper(".slider__nft", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 16,
+    thumbs: {
+      swiper: thumbs,
+    },
+  })
+
+  document.querySelector(".swiper__prev").addEventListener("click", () => {
+    nftSlider.slidePrev()
+  })
+  document.querySelector(".swiper__next").addEventListener("click", () => {
+    nftSlider.slideNext()
+  })
 }
 
 if (document.querySelector(".select")) {
