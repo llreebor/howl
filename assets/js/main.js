@@ -55,3 +55,43 @@ if (document.querySelector(".swiper")) {
     },
   })
 }
+
+if (document.querySelector(".select")) {
+  document.addEventListener("DOMContentLoaded", function () {
+    const selectTrigger = document.getElementById("select")
+    const optionsContainer = document.getElementById("options")
+    const optionListItems = document.querySelectorAll(".select__option")
+    const selectedOption = document.getElementById("selected-option")
+
+    // Toggle options visibility
+    selectTrigger.addEventListener("click", function () {
+      optionsContainer.classList.toggle("active")
+      toggleArrow()
+    })
+
+    // Update selected option and hide options
+    optionListItems.forEach((option) => {
+      option.addEventListener("click", function () {
+        selectedOption.textContent = this.textContent
+        optionsContainer.classList.remove("active")
+        toggleArrow()
+      })
+    })
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+      if (!selectTrigger.contains(event.target)) {
+        optionsContainer.classList.remove("active")
+        if (optionsContainer.classList.contains("active")) {
+          toggleArrow()
+        }
+      }
+    })
+
+    // Function to toggle arrow direction
+    function toggleArrow() {
+      const arrow = document.querySelector(".select__arrow")
+      arrow.classList.toggle("active")
+    }
+  })
+}
