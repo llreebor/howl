@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THE HOWL</title>
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
+    <!-- Header -->
     <header>
       <div class="container">
         <div class="header">
@@ -35,10 +43,347 @@
               </li>
             </ul>
 
-            <button class="btn header__btn">CONNECT WALLET</button>
+            <button class="btn btn__secondary header__btn">
+              CONNECT WALLET
+            </button>
           </div>
         </div>
       </div>
     </header>
+
+    <main>
+      <!-- Section NOW MINTING -->
+      <section class="section section__slider">
+        <div class="container">
+          <h2 class="section__title section__title-now">NOW MINTING</h2>
+
+          <!-- Slider main container -->
+          <div class="slider swiper slider__now">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide__img">
+                    <img src="./assets/img/slide-1-img.png" alt="slide image" />
+                  </div>
+                  <div class="slide__body">
+                    <h3 class="slide__title">Abstractions</h3>
+                    <p class="slide__text">
+                      The first generative art collection on Abstract
+                    </p>
+
+                    <div class="slide__info">
+                      <div class="slide__info-avatar">
+                        <img
+                          src="./assets/img/slide-avatar-1.png"
+                          alt="avatar image"
+                        />
+                      </div>
+                      <div class="slide__info-titles">
+                        <p class="slide__info-subtitle">by:</p>
+                        <p class="slide__info-title">Tut</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn slide__btn">MINT NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide__img">
+                    <img src="./assets/img/slide-2-img.png" alt="slide image" />
+                  </div>
+                  <div class="slide__body">
+                    <h3 class="slide__title">The Chads</h3>
+                    <p class="slide__text">
+                      The mascot collection of Abstract with art
+                    </p>
+
+                    <div class="slide__info">
+                      <div class="slide__info-avatar">
+                        <img
+                          src="./assets/img/slide-avatar-2.png"
+                          alt="avatar image"
+                        />
+                      </div>
+                      <div class="slide__info-titles">
+                        <p class="slide__info-subtitle">by:</p>
+                        <p class="slide__info-title">Wolves pixel artist RJ</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn slide__btn">MINT NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide__img">
+                    <img src="./assets/img/slide-3-img.png" alt="slide image" />
+                  </div>
+                  <div class="slide__body">
+                    <h3 class="slide__title">Node Monkes</h3>
+                    <p class="slide__text">
+                      The mascot collection of Abstract with art
+                    </p>
+
+                    <div class="slide__info">
+                      <div class="slide__info-avatar">
+                        <img
+                          src="./assets/img/slide-avatar-3.png"
+                          alt="avatar image"
+                        />
+                      </div>
+                      <div class="slide__info-titles">
+                        <p class="slide__info-subtitle">by:</p>
+                        <p class="slide__info-title">Ordinal Maxi</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn slide__btn">MINT NOW</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper__arrow swiper__prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <rect
+                  x="32"
+                  y="32"
+                  width="32"
+                  height="32"
+                  rx="16"
+                  transform="rotate(-180 32 32)"
+                  fill="#00EB8F"
+                />
+                <rect
+                  x="25.3333"
+                  y="14.6667"
+                  width="2.66667"
+                  height="18.6667"
+                  rx="1"
+                  transform="rotate(90 25.3333 14.6667)"
+                  fill="#20142A"
+                  fill-opacity="0.6"
+                />
+                <path
+                  d="M16.9429 8.94289C17.4636 8.42219 17.4636 7.57797 16.9429 7.05727C16.4222 6.53657 15.578 6.53657 15.0573 7.05727L7.05727 15.0573C6.5525 15.562 6.53484 16.3748 7.01721 16.901L14.3505 24.901C14.8481 25.4439 15.6916 25.4805 16.2344 24.983C16.7772 24.4854 16.8139 23.6419 16.3163 23.0991L9.8456 16.0402L16.9429 8.94289Z"
+                  fill="#414141"
+                />
+              </svg>
+            </div>
+            <div class="swiper__arrow swiper__next">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="32" height="32" rx="16" fill="#00EB8F" />
+                <rect
+                  x="6.66675"
+                  y="17.3333"
+                  width="2.66667"
+                  height="18.6667"
+                  rx="1"
+                  transform="rotate(-90 6.66675 17.3333)"
+                  fill="#20142A"
+                  fill-opacity="0.6"
+                />
+                <path
+                  d="M15.0571 23.0571C14.5364 23.5778 14.5364 24.422 15.0571 24.9427C15.5778 25.4634 16.422 25.4634 16.9427 24.9427L24.9427 16.9427C25.4475 16.438 25.4652 15.6252 24.9828 15.099L17.6495 7.09895C17.1519 6.55613 16.3084 6.51946 15.7656 7.01705C15.2228 7.51464 15.1861 8.35806 15.6837 8.90089L22.1544 15.9598L15.0571 23.0571Z"
+                  fill="#414141"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section COMING SOON -->
+      <section class="section section__slider">
+        <div class="container">
+          <h2 class="section__title section__title-soon">COMING SOON</h2>
+
+          <!-- Slider main container -->
+          <div class="slider swiper slider__soon">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide__img">
+                    <img src="./assets/img/slide-3-img.png" alt="slide image" />
+                  </div>
+                  <div class="slide__body">
+                    <h3 class="slide__title">Node Monkes</h3>
+                    <p class="slide__text">
+                      The mascot collection of Abstract with art
+                    </p>
+
+                    <div class="slide__info">
+                      <div class="slide__info-avatar">
+                        <img
+                          src="./assets/img/slide-avatar-3.png"
+                          alt="avatar image"
+                        />
+                      </div>
+                      <div class="slide__info-titles">
+                        <p class="slide__info-subtitle">by:</p>
+                        <p class="slide__info-title">Ordinal Maxi</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn btn__secondary slide__btn">
+                      LAUNCHING IN &nbsp;
+                      <span>3h 15m</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide__img">
+                    <img src="./assets/img/slide-1-img.png" alt="slide image" />
+                  </div>
+                  <div class="slide__body">
+                    <h3 class="slide__title">Abstractions</h3>
+                    <p class="slide__text">
+                      The first generative art collection on Abstract
+                    </p>
+
+                    <div class="slide__info">
+                      <div class="slide__info-avatar">
+                        <img
+                          src="./assets/img/slide-avatar-1.png"
+                          alt="avatar image"
+                        />
+                      </div>
+                      <div class="slide__info-titles">
+                        <p class="slide__info-subtitle">by:</p>
+                        <p class="slide__info-title">Tut</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn btn__secondary slide__btn">
+                      LAUNCHING IN &nbsp;
+                      <span>3h 15m</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide">
+                  <div class="slide__img">
+                    <img src="./assets/img/slide-2-img.png" alt="slide image" />
+                  </div>
+                  <div class="slide__body">
+                    <h3 class="slide__title">The Chads</h3>
+                    <p class="slide__text">
+                      The mascot collection of Abstract with art
+                    </p>
+
+                    <div class="slide__info">
+                      <div class="slide__info-avatar">
+                        <img
+                          src="./assets/img/slide-avatar-2.png"
+                          alt="avatar image"
+                        />
+                      </div>
+                      <div class="slide__info-titles">
+                        <p class="slide__info-subtitle">by:</p>
+                        <p class="slide__info-title">Wolves pixel artist RJ</p>
+                      </div>
+                    </div>
+
+                    <a href="#" class="btn btn__secondary slide__btn">
+                      LAUNCHING IN &nbsp;
+                      <span>3h 15m</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper__arrow swiper__prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <rect
+                  x="32"
+                  y="32"
+                  width="32"
+                  height="32"
+                  rx="16"
+                  transform="rotate(-180 32 32)"
+                  fill="#00EB8F"
+                />
+                <rect
+                  x="25.3333"
+                  y="14.6667"
+                  width="2.66667"
+                  height="18.6667"
+                  rx="1"
+                  transform="rotate(90 25.3333 14.6667)"
+                  fill="#20142A"
+                  fill-opacity="0.6"
+                />
+                <path
+                  d="M16.9429 8.94289C17.4636 8.42219 17.4636 7.57797 16.9429 7.05727C16.4222 6.53657 15.578 6.53657 15.0573 7.05727L7.05727 15.0573C6.5525 15.562 6.53484 16.3748 7.01721 16.901L14.3505 24.901C14.8481 25.4439 15.6916 25.4805 16.2344 24.983C16.7772 24.4854 16.8139 23.6419 16.3163 23.0991L9.8456 16.0402L16.9429 8.94289Z"
+                  fill="#414141"
+                />
+              </svg>
+            </div>
+            <div class="swiper__arrow swiper__next">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="32" height="32" rx="16" fill="#00EB8F" />
+                <rect
+                  x="6.66675"
+                  y="17.3333"
+                  width="2.66667"
+                  height="18.6667"
+                  rx="1"
+                  transform="rotate(-90 6.66675 17.3333)"
+                  fill="#20142A"
+                  fill-opacity="0.6"
+                />
+                <path
+                  d="M15.0571 23.0571C14.5364 23.5778 14.5364 24.422 15.0571 24.9427C15.5778 25.4634 16.422 25.4634 16.9427 24.9427L24.9427 16.9427C25.4475 16.438 25.4652 15.6252 24.9828 15.099L17.6495 7.09895C17.1519 6.55613 16.3084 6.51946 15.7656 7.01705C15.2228 7.51464 15.1861 8.35806 15.6837 8.90089L22.1544 15.9598L15.0571 23.0571Z"
+                  fill="#414141"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Libs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
