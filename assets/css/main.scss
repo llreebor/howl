@@ -28,7 +28,6 @@
 }
 body {
   font-family: var(--fontFamily);
-  // background: var(--color-neutral-950);
   padding-bottom: 24px;
 }
 a {
@@ -53,7 +52,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%; /* 36px */
@@ -130,14 +129,11 @@ section {
 }
 .section__title {
   color: var(--color-gray);
-  font-size: 48px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 
-  @media (width <= 992px) {
-    font-size: 36px;
-  }
   @media (width <= 480px) {
     font-size: 28px;
   }
@@ -156,7 +152,7 @@ section {
 }
 .section__subtitle {
   color: var(--color-gray);
-  font-size: 24px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 28.8px */
@@ -214,9 +210,7 @@ header {
   }
   &__logo {
     img {
-      @media (width <= 992px) {
-        width: 180px;
-      }
+      width: 200px;
       @media (width <= 480px) {
         width: 100px;
       }
@@ -336,7 +330,7 @@ header {
   // .slide__title
   &__title {
     color: var(--color-gray);
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 800;
     line-height: 120%; /* 38.4px */
@@ -354,13 +348,11 @@ header {
   // .slide__text
   &__text {
     color: var(--color-gray);
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 28.8px */
-    @media (width <= 992px) {
-      font-size: 20px;
-    }
+
     @media (width <= 768px) {
       font-size: 18px;
     }
@@ -413,14 +405,11 @@ header {
   // .slide__info-title
   &__info-title {
     color: var(--color-gray);
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 28.8px */
 
-    @media (width <= 768px) {
-      font-size: 20px;
-    }
     @media (width <= 480px) {
       font-size: 16px;
     }
@@ -730,6 +719,7 @@ header {
     align-items: center;
     justify-content: center;
     img {
+      width: 200px;
       @media (width <= 480px) {
         width: 150px;
       }

@@ -21,11 +21,11 @@ if (document.querySelector(".swiper")) {
         spaceBetween: 24,
       },
       992: {
-        slidesPerView: 2.5,
+        slidesPerView: 3,
         spaceBetween: 24,
       },
     },
-  })
+  });
 
   // Slider Coming soon
   new Swiper(".slider__soon", {
@@ -49,11 +49,11 @@ if (document.querySelector(".swiper")) {
         spaceBetween: 24,
       },
       992: {
-        slidesPerView: 2.5,
+        slidesPerView: 3,
         spaceBetween: 24,
       },
     },
-  })
+  });
 
   // Slider NFT
   const thumbs = new Swiper(".slider__nft-thumbs", {
@@ -74,7 +74,7 @@ if (document.querySelector(".swiper")) {
         slidesPerView: 4,
       },
     },
-  })
+  });
   const nftSlider = new Swiper(".slider__nft", {
     loop: true,
     slidesPerView: 1,
@@ -82,52 +82,52 @@ if (document.querySelector(".swiper")) {
     thumbs: {
       swiper: thumbs,
     },
-  })
+  });
 
   document.querySelector(".swiper__prev").addEventListener("click", () => {
-    nftSlider.slidePrev()
-  })
+    nftSlider.slidePrev();
+  });
   document.querySelector(".swiper__next").addEventListener("click", () => {
-    nftSlider.slideNext()
-  })
+    nftSlider.slideNext();
+  });
 }
 
 if (document.querySelector(".select")) {
   document.addEventListener("DOMContentLoaded", function () {
-    const selectTrigger = document.getElementById("select")
-    const optionsContainer = document.getElementById("options")
-    const optionListItems = document.querySelectorAll(".select__option")
-    const selectedOption = document.getElementById("selected-option")
+    const selectTrigger = document.getElementById("select");
+    const optionsContainer = document.getElementById("options");
+    const optionListItems = document.querySelectorAll(".select__option");
+    const selectedOption = document.getElementById("selected-option");
 
     // Toggle options visibility
     selectTrigger.addEventListener("click", function () {
-      optionsContainer.classList.toggle("active")
-      toggleArrow()
-    })
+      optionsContainer.classList.toggle("active");
+      toggleArrow();
+    });
 
     // Update selected option and hide options
     optionListItems.forEach((option) => {
       option.addEventListener("click", function () {
-        selectedOption.textContent = this.textContent
-        optionsContainer.classList.remove("active")
-        toggleArrow()
-      })
-    })
+        selectedOption.textContent = this.textContent;
+        optionsContainer.classList.remove("active");
+        toggleArrow();
+      });
+    });
 
     // Close dropdown when clicking outside
     document.addEventListener("click", function (event) {
       if (!selectTrigger.contains(event.target)) {
-        optionsContainer.classList.remove("active")
+        optionsContainer.classList.remove("active");
         if (optionsContainer.classList.contains("active")) {
-          toggleArrow()
+          toggleArrow();
         }
       }
-    })
+    });
 
     // Function to toggle arrow direction
     function toggleArrow() {
-      const arrow = document.querySelector(".select__arrow")
-      arrow.classList.toggle("active")
+      const arrow = document.querySelector(".select__arrow");
+      arrow.classList.toggle("active");
     }
-  })
+  });
 }
